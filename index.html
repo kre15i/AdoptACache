@@ -87,8 +87,31 @@
 
 <section id="accountPage" class="subpage">
     <!-- Hier kommt der Inhalt der Account-Seite -->
-    <h2>Account verwalten</h2>
-    <p>Hier können Sie Ihr Benutzerkonto verwalten.</p>
+    <!-- Registration Form -->
+<form id="registrationForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <br>
+    <label for="securityQuestion">Security Question:</label>
+    <input type="text" id="securityQuestion" name="securityQuestion" required>
+    <br>
+    <button type="submit">Register</button>
+  </form>
+  
+  <!-- Login Form -->
+  <form id="loginForm">
+    <label for="usernameLogin">Username:</label>
+    <input type="text" id="usernameLogin" name="usernameLogin" required>
+    <br>
+    <label for="passwordLogin">Password:</label>
+    <input type="password" id="passwordLogin" name="passwordLogin" required>
+    <br>
+    <button type="submit">Login</button>
+  </form>
+  
 </section>
 
 <section id="newsPage" class="subpage">

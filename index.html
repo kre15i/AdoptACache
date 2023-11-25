@@ -9,18 +9,19 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f7f1e3; /* Hellgelb für herbstliche Stimmung */
+            background-color: #d2d8c3; /* Dunkles Grün für eine gedämpfte Stimmung */
+            color: #333; /* Dunkelgrau für Text */
         }
 
         header {
-            background-color: #1f2d3d; /* Dunkelblau für Kontrast */
+            background-color: #4b6f4b; /* Dunkelgrünton für Kontrast */
             padding: 10px;
             text-align: center;
             color: #ffffff; /* Weiß für Text auf dunklem Hintergrund */
         }
 
         nav {
-            background-color: #38495a; /* Dunkles Blaugrau für Navigationsleiste */
+            background-color: #577d57; /* Dunkles Grün für Navigationsleiste */
             overflow: hidden;
         }
 
@@ -34,34 +35,87 @@
         }
 
         nav a:hover {
-            background-color: #536878; /* Blaugrau bei Hover für Interaktivität */
+            background-color: #4d6f4d; /* Dunkleres Grün bei Hover für Interaktivität */
             color: #ffffff;
+        }
+
+        /* Verschiebe nur Account ganz nach rechts */
+        nav a:nth-child(5) {
+            float: right;
         }
 
         section {
             padding: 20px;
+        }
+
+        /* Verstecke alle Unterseiten standardmäßig */
+        .subpage {
+            display: none;
+        }
+
+        /* Zeige nur die aktive Unterseite */
+        .active {
+            display: block;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1 style="color: #ffb366;">Adopt a Geocache</h1> <!-- Oranger Farbton für den Header-Titel -->
+    <h1 style="color: #df9759;">Adopt a Geocache</h1> <!-- Oranger Farbton für den Header-Titel -->
 </header>
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="#upload">Upload</a>
-    <a href="#account">Account</a>
-    <a href="#news">News</a>
-    <a href="#documentation">Documentation</a>
+    <a href="#home" onclick="showPage('homePage')">Home</a>
+    <a href="#news" onclick="showPage('newsPage')">News</a>
+    <a href="#upload" onclick="showPage('uploadPage')">Upload</a>
+    <a href="#documentation" onclick="showPage('documentationPage')">Documentation</a>
+    <a href="#account" onclick="showPage('accountPage')">Account</a>
 </nav>
 
-<section>
-    <!-- Hier kommt der Inhalt der jeweiligen Unterseiten -->
+<section id="homePage" class="subpage active">
+    <!-- Hier kommt der Inhalt der Home-Seite -->
     <h2>Willkommen auf der Startseite!</h2>
     <p>Hier können Sie Informationen über Geocaches anzeigen und verwalten.</p>
 </section>
+
+<section id="uploadPage" class="subpage">
+    <!-- Hier kommt der Inhalt der Upload-Seite -->
+    <h2>Geocache hochladen</h2>
+    <p>Hier können Sie neue Geocaches hochladen.</p>
+</section>
+
+<section id="accountPage" class="subpage">
+    <!-- Hier kommt der Inhalt der Account-Seite -->
+    <h2>Account verwalten</h2>
+    <p>Hier können Sie Ihr Benutzerkonto verwalten.</p>
+</section>
+
+<section id="newsPage" class="subpage">
+    <!-- Hier kommt der Inhalt der News-Seite -->
+    <h2>Neuigkeiten</h2>
+    <p>Lesen Sie die neuesten Informationen über Geocaching.</p>
+</section>
+
+<section id="documentationPage" class="subpage">
+    <!-- Hier kommt der Inhalt der Dokumentations-Seite -->
+    <h2>Dokumentation</h2>
+    <p>Hier finden Sie die Dokumentation für unser Geocache Management System.</p>
+</section>
+
+<script>
+    function showPage(pageId) {
+        // Verstecke alle Unterseiten
+        var subpages = document.getElementsByClassName('subpage');
+        for (var i = 0; i < subpages.length; i++) {
+            subpages[i].classList.remove('active');
+        }
+
+        // Zeige die ausgewählte Unterseite
+        var selectedPage = document.getElementById(pageId);
+        selectedPage.classList.add('active');
+    }
+</script>
 
 </body>
 </html>

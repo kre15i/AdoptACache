@@ -1,40 +1,75 @@
-/* Add this CSS inside the <style> tag in the head of your HTML document */
-
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f8f5f1; /* Creme-Weiß für herbstliche Stimmung */
+    color: #333; /* Dunkelgrau für Text */
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 1em;
+    background-color: #2c3e50; /* Dunkelgrau-Blau für Kontrast */
+    padding: 20px;
     text-align: center;
+    color: #ecf0f1; /* Weiß für Text auf dunklem Hintergrund */
 }
 
-main {
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #fff;
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav {
+    background-color: #34495e; /* Dunkles Blaugrau für Navigationsleiste */
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Sanfter Farbübergang bei Hover */
+}
+
+nav a:hover {
+    background-color: #2c3e50; /* Dunkelgrau-Blau bei Hover für Interaktivität */
+}
+
+section {
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section p {
+    line-height: 1.6;
 }
 
 h2 {
-    color: #333;
+    color: #2c3e50; /* Dunkelgrau-Blau für Überschriften */
+    border-bottom: 2px solid #2c3e50; /* Unterstreichungseffekt */
+    padding-bottom: 5px;
 }
 
-p {
-    line-height: 1.6;
-    color: #555;
+section a {
+    color: #3498db; /* Blau für Links */
+    text-decoration: none;
+    border-bottom: 1px solid #3498db; /* Unterstreichungseffekt bei Hover */
+    transition: border-bottom 0.3s;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    padding: 1em;
-    text-align: center;
+section a:hover {
+    border-bottom: 2px solid #3498db; /* Stärkere Unterstreichung bei Hover */
+}
+
+code {
+    background-color: #f2f2f2; /* Hellgrau für Hervorhebung von Code */
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }

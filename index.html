@@ -88,8 +88,15 @@
 
 <section id="accountPage" class="subpage">
     <!-- Hier kommt der Inhalt der Account-Seite -->
-    
-  
+    <h2>Benutzerkonto</h2>
+    <p>Willkommen auf Ihrer Account-Seite!</p>
+
+    <!-- Beispiel: GitHub-Authentifizierung-Button -->
+    <button onclick="loginWithGitHub()">Mit GitHub anmelden</button>
+
+    <div id="userData">
+        <!-- Hier werden Benutzerdaten angezeigt, wenn angemeldet -->
+    </div>
 </section>
 
 <section id="newsPage" class="subpage">
@@ -115,6 +122,12 @@
         // Zeige die ausgewählte Unterseite
         var selectedPage = document.getElementById(pageId);
         selectedPage.classList.add('active');
+    }
+
+    function loginWithGitHub() {
+        // In einer echten Umgebung würde hier die GitHub-Authentifizierung stattfinden
+        // Für Demonstrationszwecke geben wir nur eine Meldung aus
+        alert("GitHub-Authentifizierung: Noch nicht implementiert (serverseitige Logik erforderlich).");
     }
 </script>
 
